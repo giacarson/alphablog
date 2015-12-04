@@ -6,10 +6,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<% unless current_page?('/') %>
+   <body class="default">
+<% else %>
+	<body class="home">
+<% end %>
 
+	<%= render 'layouts/header' %>
+	
 	<%= render 'layouts/messages' %>
+	
 	<%= yield %>
-	<%= link_to 'Home', root_path %>
+
+	<%= render 'layouts/footer' %>
 </body>
 </html>

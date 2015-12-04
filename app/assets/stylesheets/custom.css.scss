@@ -1,0 +1,205 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,800);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	header {
+		height: 75px;
+		width: 100%;
+		background: #144a75;
+		color: #fff;
+		.logo {
+			float: left;
+			margin: 0;
+			padding: 30px 0; 
+			font-size: 15px;
+			font-weight: 600;
+			a {
+				color:#fff;
+				&:hover {
+					text-decoration:none;
+					color: #4bcaff;
+				}
+			}
+		}
+		nav {
+			ul {
+				float: right;
+				list-style: none;
+				padding: 30px 0; 
+				li {
+					float: left;
+					padding:0 10px 15px;
+					font-weight: 600;
+					color: #4bcaff;
+					a {
+						text-decoration: none;
+						font-weight: 400;
+						color: #fff;
+						border: none;
+						&:hover {
+							text-decoration:none;
+							color: #4bcaff;
+						}
+					}
+				}
+			}
+		}
+		form {
+			padding: 20px 0;
+			input[type="text"] {
+				padding: 5px;
+				height: 20px;
+			}
+			button[type="submit"] {
+				padding: 0 5px;
+				height: 20px;
+				color:144a75;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+/* Home */
+
+.home {
+	header {
+		position: absolute;
+		top: 0; left: 0;
+		height: 75px;
+		width: 100%;
+		background: #000;
+		/* Fallback for web browsers that don't support RGBa */
+	    background-color: rgb(0, 0, 0);
+	    /* RGBa with 0.6 opacity */
+	    background-color: rgba(0, 0, 0, 0.6);
+	    /* For IE 5.5 - 7*/
+	    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	    /* For IE 8*/
+	    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+		color: #fff;
+		z-index: 999;
+		h1 {
+			float: left;
+			margin: 0;
+			padding: 30px 0; 
+			font-size: 15px;
+			font-weight: 600;
+		}
+		nav {
+			ul {
+				float: right;
+				list-style: none;
+				padding: 30px 0; 
+				li {
+					float: left;
+					padding:0 10px 15px;
+					font-weight: 600;
+					color: #4bcaff;
+					a {
+						text-decoration: none;
+						font-weight: 400;
+						color: #fff;
+						border: none;
+						&:hover {
+							text-decoration:none;
+							color: #4bcaff;
+						}
+					}
+				}
+			}
+		}
+		form {
+			padding: 20px 10px 0;
+			input[type="text"] {
+				padding: 5px;
+				height: 20px;
+				font-weight: 600;
+			}
+			button[type="submit"] {
+				padding: 0 5px;
+				margin: 1px 0 0 5px;
+				height: 20px;
+				color:#144a75;
+				font-weight: 600;
+				font-size: 12px;
+			}
+		}
+	}
+	.jumbotron {
+		position: absolute;
+		top: 0; left: 0;
+		height: 400px;
+		width: 100%;
+		background: asset-url("photo-1439074216907-51e7025705db.jpg") top right no-repeat;
+		z-index: 1;
+		p {
+			display: block;
+			margin-right: 10%;
+			float: right;
+			text-align: center;
+			padding: 10px;
+			font-weight: 300;
+			font-size: 21px;
+			line-height: 18px;
+			background: #000;
+			/* Fallback for web browsers that don't support RGBa */
+		    background-color: rgb(0, 0, 0);
+		    /* RGBa with 0.6 opacity */
+		    background-color: rgba(0, 0, 0, 0.6);
+		    /* For IE 5.5 - 7*/
+		    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+		    /* For IE 8*/
+		    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+			color: #fff;
+			&:first-of-type {
+				margin: 105px auto 10px;
+				width: 80%;
+				float: none;
+			}
+		}
+		a {
+			clear:both;
+			border:1px solid #144a75;
+		}
+	}
+	section {
+			margin-top: 400px;
+		}
+}
+
+section {
+}
+
+footer {
+	margin: 10px 0 0;
+	padding: 20px 0 0;
+	background: #144a75;
+	p {
+		float: left;		
+		color:#fff;
+	}
+	nav {
+		ul {
+			float: right;
+			list-style: none;
+			li {
+				float: left;
+				padding:0 10px 15px;
+				font-weight: 600;
+				color: #fff;
+				a {
+					text-decoration: none;
+					font-weight: 400;
+					color: #fff;
+					border: none;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
