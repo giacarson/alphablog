@@ -1,30 +1,47 @@
 <% if @article.errors.any? %>
-<h2>These errors prevented the article from being saved</h2>
-	<ul>
-		<% @article.errors.full_messages.each do |msg| %>
-		<li>
-			<%= msg %>
-		</li>
-		<% end %>
-	</ul>
+	<div class="col-md-10">
+		<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h2 class="panel-title">
+						<%= pluralize(@article.errors.count, "errors") %> prevented the article from being saved:
+					</h2>
+					<div class="panel-body">
+						<ul>
+							<%= @article.errors.full_messages.each do |msg| %>
+								<li><%= msg %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <% end %>
 
-<%= form_for @article do |f| %>
+<div class="form group">
+	<%= form_for @article do |f| %>
 
-	<p>
-	<%= f.label :title %><br/>
-	<%= f.text_field :title %>
-	</p>
+		<div class="col-md-8">
+			<p>
+				<%= f.label :title %><br/>
+				<%= f.text_field :title, class: "form-control", placeholder: "Title", autofocus: true %>
+			</p>
+		</div>
+		<div class="col-md-8">
+			<p>
+				<%= f.label :description %><br/>
+				<%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Article Content" %>
+			</p>
+		</div>
+			<div class="col-md-8">
+				<btn>
+					<%= f.submit class: 'btn btn-primary btn-md'%>
+				</btn>
 
-	<p>
-	<%= f.label :description %><br/>
-	<%= f.text_area :description %>
-	</p>
-	
-	<p>
-	<%= f.submit %>
-	</p>
-
-<% end %>
-
-<%= link_to "Back to articles listing", articles_path %>
+				<btn>
+					<%= link_to "Cancel", articles_path, class: 'btn btn-primary btn-md' %>
+				</btn>
+			</div>
+		</div>
+	<% end %>
+</div>

@@ -47,16 +47,21 @@ body {
 			}
 		}
 		form {
-			padding: 20px 0;
-			input[type="text"] {
-				padding: 5px;
-				height: 20px;
-			}
-			button[type="submit"] {
-				padding: 0 5px;
-				height: 20px;
-				color:144a75;
-				font-weight: 400;
+			&.nav-search {
+				padding: 20px 10px 0;
+				input[type="text"] {
+					padding: 5px;
+					height: 20px;
+					font-weight: 600;
+				}
+				button[type="submit"] {
+					padding: 0 5px;
+					margin: 1px 0 0 5px;
+					height: 20px;
+					color:#144a75;
+					font-weight: 600;
+					font-size: 12px;
+				}
 			}
 		}
 	}
@@ -171,6 +176,42 @@ body {
 }
 
 section {
+	h1 {
+		margin: 20px 0;
+	}
+	
+	table {
+		margin: 20px 0;
+		&.show-all {
+			tr {
+				border-bottom: 1px solid #144a75;
+				&:first-of-type {
+					border: none;
+				}
+				&:last-of-type {
+					border: none;
+				}
+				td {
+					padding: 15px 0;
+					vertical-align: top;
+					ul {
+						list-style: none;
+						li {
+							float: left;
+							a {
+								padding: 0 10px;
+								text-decoration: none;
+							}
+							&.info {
+								clear:both;
+								padding: 5px 0 0 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 footer {
