@@ -1,14 +1,16 @@
 <section class="container">
 
-	<article class="post well">
-		<h1><%= @article.title %></h1>
-		<hr>
-		<p><%= @article.description %></p> 
-	</article>
+	<div class="row">
+		<article class="post well">
+			<h1><%= @article.title %></h1>
+			<hr>
+			<p><%= @article.description %></p> 
+		</article>
 
-	<btn><%= link_to "Edit", edit_article_path(@article), class: 'btn btn-primary btn-xs' %></btn>
-	<btn><%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "This will delete the current article. Are you sure?"}, class: 'btn btn-danger btn-xs' %></btn>
+		<btn><%= link_to "Edit", edit_article_path(@article), class: 'btn btn-primary btn-xs' %></btn>
+		<btn><%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "This will delete the current article. Are you sure?"}, class: 'btn btn-danger btn-xs' %></btn>
 
-	<btn><%= link_to "All Articles", articles_path, class: 'btn btn-success btn-xs' %></btn>
+		<btn><%= link_to "All Articles", articles_path, class: 'btn btn-success btn-xs' %></btn>
+	</div>
 
 </section>

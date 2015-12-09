@@ -219,8 +219,11 @@ section {
 	}
 
 	.post {
+		margin-top: 20px;
 		h1 {
 			text-align: center;
+			margin-top: 0;
+			padding-top: 0;
 		}
 		p {
 			padding: 0 3%;
