@@ -191,11 +191,30 @@ section {
 	}
 
 	.listing {
+		position: relative;
 		h2 {
 			margin-top: 0px;
+			a {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.article {
+			width:75%;
 		}
 		.article-action {
-			margin-top: 15px;
+			position: absolute;
+			top:0; right:0;
+			width:20%;
+			text-align: center;
+			hr {
+				margin: 5px 0;
+			}
+			.btn {
+				margin:5px 0 5px 3px;
+			}
+
 		}
 	}
 
