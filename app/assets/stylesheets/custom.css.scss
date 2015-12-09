@@ -180,36 +180,22 @@ section {
 		margin: 20px 0;
 	}
 	
-	table {
-		margin: 20px 0;
-		&.show-all {
-			tr {
-				border-bottom: 1px solid #144a75;
-				&:first-of-type {
-					border: none;
-				}
-				&:last-of-type {
-					border: none;
-				}
-				td {
-					padding: 15px 0;
-					vertical-align: top;
-					ul {
-						list-style: none;
-						li {
-							float: left;
-							a {
-								padding: 0 10px;
-								text-decoration: none;
-							}
-							&.info {
-								clear:both;
-								padding: 5px 0 0 10px;
-							}
-						}
-					}
-				}
-			}
+	.listing-top {
+		h1 {
+			padding:0;
+			margin: 0 0 20px 20px;
+		}
+		p {
+			margin-top: 8px;
+		}
+	}
+
+	.listing {
+		h2 {
+			margin-top: 0px;
+		}
+		.article-action {
+			margin-top: 15px;
 		}
 	}
 
