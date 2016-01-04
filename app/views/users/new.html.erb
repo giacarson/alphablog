@@ -1,33 +1,3 @@
 <h1>Signup for AlphaBlog</h1>
 
-<%= render 'shared/errors', obj: @user %>
-
-<div class="form group">
-	<%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-
-		<div class="col-md-8">
-			<p>
-				<%= f.label :username %><br/>
-				<%= f.text_field :username, class: "form-control", placeholder: "Username", autofocus: true %>
-			</p>
-		</div>
-		<div class="col-md-8">
-			<p>
-				<%= f.label :email %><br/>
-				<%= f.email_field :email, class: "form-control", placeholder: "Email" %>
-			</p>
-		</div>
-		<div class="col-md-8">
-			<p>
-				<%= f.label :password %><br/>
-				<%= f.password_field :password, class: "form-control", placeholder: "Password" %>
-			</p>
-		</div>
-			<div class="col-md-8">
-				<btn>
-					<%= f.submit "Sign Up", class: 'btn btn-primary btn-md'%>
-				</btn>
-			</div>
-		</div>
-	<% end %>
-</div>
+<%= render 'form' %>
