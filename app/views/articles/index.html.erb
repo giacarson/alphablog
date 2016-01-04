@@ -4,22 +4,5 @@
 		<p class="col-md-3"><%= link_to "Create new article", new_article_path, class: "btn btn-sm btn-primary" %></p>
 	</div>
 
-<% @articles.each do |article| %>
-	<div class="col-md-12">
-		<div class="well well-lg">
-			<article class="listing">
-				<div class="article">
-					<h2><%= link_to article.title, article_path(article) %></h2>
-					<p><%= truncate(article.description, length:290) %></p>
-				</div>
-				<div class ="article-action">
-					<p>Author: <%= article.user.username if article.user %><br/>Created: <%= article.created_at.strftime("%b %d %Y")%></p>
-					<p>Updated: <%= article.updated_at.strftime("%b %d %Y")%></p><hr>
-					<btn><%= link_to "Edit Article", edit_article_path(article), class:"btn btn-xs btn-success" %></btn>
-					<btn><%= link_to "Delete Article", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-xs btn-danger" %></btn>
-				</div>
-			</article>
-		</div>
-	</div>
-<% end %>
+	<%= render 'article', obj: @articles %>
 </section>
