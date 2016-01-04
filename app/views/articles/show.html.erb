@@ -4,6 +4,13 @@
 		<article class="post well">
 			<h1><%= @article.title %></h1>
 			<hr>
+			<ul class="listing">
+				<div class="row">
+					<li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+					<li><%= link_to @article.user.username, user_path(@article.user) %></li>
+					<li><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></li>
+				</div>
+			</ul>
 			<p><%= @article.description %></p> 
 		</article>
 
