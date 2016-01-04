@@ -4,5 +4,9 @@
 		<p class="col-md-3"><%= link_to "Create new article", new_article_path, class: "btn btn-sm btn-primary" %></p>
 	</div>
 
-	<%= render 'article', obj: @articles %>
+	<div class="listing">
+		<%= will_paginate %>
+			<%= render 'article', obj: @articles %>
+		<%= will_paginate %>
+	</div>
 </section>
