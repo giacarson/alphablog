@@ -1,13 +1,18 @@
-<h1>Welcome <%= @user.username %></h1>
+<section class="user-profile">
 
-<div class="row">
-	<div class="col-md-4 col-md-offset-2">
+	<div class="user-profile-info">
 		<%= gravatar_for @user, size: 150 %>
+		<div class="right">
+			<h1><%= @user.username %></h1>
+		</div>
 	</div>
-</div>
 
-<h4><%= @user.username %>'s articles</h4>
+	<div class="user-profile-articles">
+		<h3><%= @user.username %>'s articles</h3>
 
-<%= will_paginate @user_articles %>
-<%= render 'articles/article', obj: @user_articles %>
-<%= will_paginate @user_articles %>
+		<%= will_paginate @user_articles %>
+		<%= render 'articles/article', obj: @user_articles %>
+		<%= will_paginate @user_articles %>
+	</div>
+
+</section>

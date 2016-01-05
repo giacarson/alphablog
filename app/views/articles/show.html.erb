@@ -1,16 +1,16 @@
 <section class="container">
 
-	<div class="row">
+	<div class="listing">
 		<article class="post well">
 			<h1><%= @article.title %></h1>
-			<hr>
-			<ul class="listing">
-				<div class="row">
+
+			<div class="owner-info">
+				<ul>
 					<li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
 					<li><%= link_to @article.user.username, user_path(@article.user) %></li>
 					<li><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></li>
-				</div>
-			</ul>
+				</ul>
+			</div>
 			<p><%= @article.description %></p> 
 		</article>
 

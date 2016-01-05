@@ -20,7 +20,7 @@ body {
 	}
 
 	#main{
-		padding-bottom:150px; /* this needs to be bigger than footer height*/
+		padding-bottom:50px; /* this needs to be bigger than footer height*/
 	}
 	
 	header {
@@ -61,6 +61,9 @@ body {
 							text-decoration:none;							color: $md-blue;
 						}
 					}
+					&.admin {
+						color: #5cb85c;
+					}
 				}
 			}
 		}
@@ -83,6 +86,11 @@ body {
 			}
 		}
 	}
+
+	.col-centered {
+		  float: none;
+		  margin: 0 auto;
+		}
 }
 
 /* Home */
@@ -161,10 +169,6 @@ body {
 		background: asset-url("photo-1447877015176-3099cb49cd6a.jpg") top center no-repeat;
 		background-size: 100%;
 		z-index: 1;
-		.col-centered {
-		  float: none;
-		  margin: 0 auto;
-		}
 		.btn-primary {
 			background: $gray-blue;
 			border: 1px solid $dk-blue;
@@ -198,16 +202,24 @@ body {
 		}
 	}
 	section {
-			margin-top: 400px;
+			padding-top: 400px;
 		}
 }
 
 section {
 	h1 {
+		clear: both;
 		margin: 20px 0;
+		padding-bottom: 20px;
+		text-align: center;
+		border-bottom: 2px solid $gray-blue;
 	}
 
 	.listing {
+		margin:30px 0;
+		.pagination {
+			margin:0;
+		}
 		h2 {
 			margin-top: 0px;
 			a {
@@ -245,9 +257,98 @@ section {
 			}
 
 		}
+		.owner-info {
+			float: right;
+			width: 20%;
+			border: 2px solid $dk-blue;
+			border-radius: 4px;
+			ul {
+				list-style: none;
+				margin: 15px 0;
+				text-align: center;
+				li {
+					width: 140px;
+					padding: 5px; 
+				}
+			}
+		}
+	}
+
+	ul {
+		&.show-users {
+			list-style: none;
+			height: 100px;
+			margin: 30px 0 0;
+			.user-block {
+				li {
+					margin: 5px 0 0;
+					&.grav {
+						display: block;
+						float: left;
+						margin: 0 10px 0 0;
+					}
+					&:nth-child(2) {
+						padding-top: 15px;
+					}
+					&:last-of-type {
+						a {
+							color: red;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.user-profile {
+		.user-profile-info {
+			width: 500px;
+			padding: 0;
+			margin: 0 auto;
+			text-align: center;
+			img {
+				float: left;
+			}
+			.right {
+				float: right;
+				h1 {
+					width: 300px;
+					border-bottom: none;
+					text-align: left;
+				}
+			}
+		}
+		.user-profile-articles {
+			clear: both;
+			padding: 30px 0 100px;
+			h3 {
+				clear:both;
+				margin: 30px 0;
+			}
+			.article {
+				height: 120px;
+				h2 {
+					font-size: 20px;
+					margin-top: -5px;
+				}
+			}
+			.article-info {
+				height: 120px;
+				ul {
+					&.article-owner {
+						li {
+							&:first-of-type {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.post {
+		min-height: 300px;
 		margin-top: 20px;
 		h1 {
 			text-align: center;
