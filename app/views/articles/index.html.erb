@@ -1,12 +1,13 @@
 <section class="container">
 	<div class="listing-top">
-		<h1 class="col-md-3">All Articles</h1>
-		<p class="col-md-3"><%= link_to "Create new article", new_article_path, class: "btn btn-sm btn-primary" %></p>
+		<h1>All Articles</h1>
 	</div>
 
 	<div class="listing">
 		<%= will_paginate %>
-			<%= render 'article', obj: @articles %>
+
+		<%= render 'article', obj: @articles %>
+	
 		<%= will_paginate %>
 	</div>
 </section>

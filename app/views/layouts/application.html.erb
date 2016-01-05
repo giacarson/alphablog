@@ -11,13 +11,18 @@
 <% else %>
 	<body class="home">
 <% end %>
+	<div id="wrap">
 
-	<%= render 'layouts/header' %>
-	
-	<%= render 'layouts/messages' %>
-	
-	<%= yield %>
-	<%= debug(params) if Rails.env.development? %>
+		<%= render 'layouts/header' %>
+
+		<div id="main" class="eclear-top">
+			
+			<%= render 'layouts/messages' %>
+			
+			<%= yield %>
+
+		</div>
+	</div>
 
 	<%= render 'layouts/footer' %>
 </body>

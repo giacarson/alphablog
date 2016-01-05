@@ -3,5 +3,12 @@
 		<li><%= link_to_unless_current("Home", root_path) %></li>
 		<li><%= link_to_unless_current("About", about_path) %></li>
 		<li><%= link_to_unless_current("Blog", articles_path) %></li>
+		<% if logged_in? %>
+			<li><%= link_to 'Logout', logout_path, method: :delete %></li>
+			
+		<% else %>
+			<li><%= link_to 'Login', login_path %></li>
+			<li><%= link_to 'Sign Up', signup_path %></li>
+		<% end %>
 	</ul>
 </nav>

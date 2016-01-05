@@ -2,12 +2,31 @@
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,800);
 
+$dk-blue: #09142a;
+$md-blue: #3d5378;
+$gray-blue: #697ea1;
+$gray: #333;
+
+html {
+	height: 100%;
+}
 body {
 	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+
+	#wrap{
+		max-width: none;
+		min-height: 100%; 
+	}
+
+	#main{
+		padding-bottom:150px; /* this needs to be bigger than footer height*/
+	}
+	
 	header {
 		height: 75px;
 		width: 100%;
-		background: #144a75;
+		background: $dk-blue;
 		color: #fff;
 		.logo {
 			float: left;
@@ -19,7 +38,7 @@ body {
 				color:#fff;
 				&:hover {
 					text-decoration:none;
-					color: #4bcaff;
+					color: $md-blue;
 				}
 			}
 		}
@@ -32,15 +51,14 @@ body {
 					float: left;
 					padding:0 10px 15px;
 					font-weight: 600;
-					color: #4bcaff;
+					color: $gray-blue;
 					a {
 						text-decoration: none;
-						font-weight: 400;
+						font-weight: 600;
 						color: #fff;
 						border: none;
 						&:hover {
-							text-decoration:none;
-							color: #4bcaff;
+							text-decoration:none;							color: $md-blue;
 						}
 					}
 				}
@@ -58,7 +76,7 @@ body {
 					padding: 0 5px;
 					margin: 1px 0 0 5px;
 					height: 20px;
-					color:#144a75;
+					color: $gray-blue;
 					font-weight: 600;
 					font-size: 12px;
 				}
@@ -102,15 +120,16 @@ body {
 					float: left;
 					padding:0 10px 15px;
 					font-weight: 600;
-					color: #4bcaff;
+					color: $gray-blue;
 					a {
 						text-decoration: none;
-						font-weight: 400;
+						font-weight: 600;
 						color: #fff;
 						border: none;
 						&:hover {
 							text-decoration:none;
-							color: #4bcaff;
+							font-weight: 600;
+							color: $gray-blue;
 						}
 					}
 				}
@@ -127,7 +146,7 @@ body {
 				padding: 0 5px;
 				margin: 1px 0 0 5px;
 				height: 20px;
-				color:#144a75;
+				color:$dk-blue;
 				font-weight: 600;
 				font-size: 12px;
 			}
@@ -138,11 +157,20 @@ body {
 		top: 0; left: 0;
 		height: 400px;
 		width: 100%;
-		background: asset-url("photo-1439074216907-51e7025705db.jpg") top right no-repeat;
+		overflow: visible;
+		background: asset-url("photo-1447877015176-3099cb49cd6a.jpg") top center no-repeat;
+		background-size: 100%;
 		z-index: 1;
+		.col-centered {
+		  float: none;
+		  margin: 0 auto;
+		}
+		.btn-primary {
+			background: $gray-blue;
+			border: 1px solid $dk-blue;
+		}
 		p {
 			display: block;
-			margin-right: 10%;
 			float: right;
 			text-align: center;
 			padding: 10px;
@@ -161,13 +189,12 @@ body {
 			color: #fff;
 			&:first-of-type {
 				margin: 105px auto 10px;
-				width: 80%;
 				float: none;
 			}
 		}
 		a {
 			clear:both;
-			border:1px solid #144a75;
+			border:1px solid $dk-blue;
 		}
 	}
 	section {
@@ -179,19 +206,8 @@ section {
 	h1 {
 		margin: 20px 0;
 	}
-	
-	.listing-top {
-		h1 {
-			padding:0;
-			margin: 0 0 20px 20px;
-		}
-		p {
-			margin-top: 8px;
-		}
-	}
 
 	.listing {
-		position: relative;
 		h2 {
 			margin-top: 0px;
 			a {
@@ -201,18 +217,31 @@ section {
 			}
 		}
 		.article {
-			width:75%;
+			float: left;
+			width:80%;
+			height: 150px;
 		}
-		.article-action {
-			position: absolute;
-			top:0; right:0;
-			width:20%;
-			text-align: center;
-			hr {
-				margin: 5px 0;
+		.article-info {
+			float: right;
+			width:19%;
+			height: 150px;
+			&.well {
+				padding-left: 0;
+				margin-left: 0;
 			}
-			.btn {
-				margin:5px 0 5px 3px;
+			ul {
+				list-style: none;
+				li {
+					text-align: center;
+					float: left;
+					margin: 0 0 4px 0;
+				}
+				&:last-of-type {
+					clear: both;
+					li {
+						margin: 5px 5px 5px 0;
+					}
+				}
 			}
 
 		}
@@ -232,9 +261,12 @@ section {
 }
 
 footer {
-	margin: 20px 0 0;
-	padding: 20px 0 0;
-	background: #144a75;
+	position: relative;
+	margin-top: -40px; /* negative value of footer height */
+	height: 40px;
+	clear:both;
+	padding-top:10px;
+	background: $dk-blue;
 	p {
 		float: left;		
 		color:#fff;
