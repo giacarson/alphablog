@@ -3,8 +3,11 @@
 	<div class="col-centered col-md-7">
 		<p>Welcome to the not-so-one-and-only AlphaBlog!</p>
 	</div>
-	
-	<btn><%= link_to 'Sign Up', articles_path, class: "btn btn-primary btn-md col-md-1 col-md-offset-6" %></btn>
+	<% if logged_in? %>
+		<btn><%= link_to 'Entrez', articles_path, class: "btn btn-primary btn-md col-md-1 col-md-offset-6" %></btn>
+	<% else %>
+		<btn><%= link_to 'Sign Up', signup_path, class: "btn btn-primary btn-md col-md-1 col-md-offset-6" %></btn>
+	<% end %>
   </div>
 </div>
 
