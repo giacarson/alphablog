@@ -14,7 +14,7 @@
 			<p><%= @article.description %></p> 
 		</article>
 
-		<% if logged_in? && current_user == @article.user %>
+		<% if logged_in? && (current_user == @article.user || current_user.admin?) %>
 			<btn><%= link_to "Edit", edit_article_path(@article), class: 'btn btn-primary btn-xs' %></btn>
 			<btn><%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "This will delete the current article. Are you sure?"}, class: 'btn btn-danger btn-xs' %></btn>
 		<% end %>
