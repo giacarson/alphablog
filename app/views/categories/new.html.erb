@@ -1,0 +1,23 @@
+<%= render 'shared/errors', obj: @category %>
+
+<div class="form group">
+	<%= form_for @category do |f| %>
+
+		<div class="col-md-8">
+			<p>
+				<%= f.label :name %><br/>
+				<%= f.text_field :name, class: "form-control", placeholder: "Category Name", autofocus: true %>
+			</p>
+		</div>
+			<div class="col-md-8">
+				<btn>
+					<%= f.submit class: 'btn btn-primary btn-md'%>
+				</btn>
+
+				<btn>
+					<%= link_to "Cancel", root_path, class: 'btn btn-primary btn-md' %>
+				</btn>
+			</div>
+		</div>
+	<% end %>
+</div>
