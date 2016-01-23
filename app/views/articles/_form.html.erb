@@ -15,14 +15,23 @@
 				<%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Article Content" %>
 			</p>
 		</div>
-			<div class="col-md-8">
-				<btn>
-					<%= f.submit class: 'btn btn-primary btn-md'%>
-				</btn>
 
-				<btn>
-					<%= link_to "Cancel", articles_path, class: 'btn btn-primary btn-md' %>
-				</btn>
+		<div class="col-md-8">
+			<p>
+				<%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+					<%= cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+				<% end %>
+			</p>
+		</div>
+
+		<div class="col-md-8">
+			<btn>
+				<%= f.submit class: 'btn btn-primary btn-md'%>
+			</btn>
+
+			<btn>
+				<%= link_to "Cancel", articles_path, class: 'btn btn-primary btn-md' %>
+			</btn>
 			</div>
 		</div>
 	<% end %>

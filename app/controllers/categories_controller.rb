@@ -8,7 +8,8 @@ class CategoriesController < ApplicationController
 	end
 
 	def show
-		@page_title = Category.name
+		@category = Category.find(params[:id])
+		@category_articles = @category.articles.paginate(page: params[:page], per_page: 5)
 	end
 
 	def new
@@ -33,7 +34,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def require_admin
-		if !logged_in? || (logged_in? and !current_user.admin?) 
+		if !logged_in? || (logged_in? and !current_user.admin?)
 			flash[:danger] = "Only admins can create categories"
 			redirect_to categories_path
 		end
