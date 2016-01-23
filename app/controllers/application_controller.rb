@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in?
 
+  before_filter :set_page_title
+
   def current_user
   	@current_user  ||= User.find(session[:user_id]) if session[:user_id]
   end
@@ -18,6 +20,12 @@ class ApplicationController < ActionController::Base
   		flash[:danger] = "You must be logged in"
   		redirect_to root_path
   	end
+  end
+
+  private
+
+  def set_page_title
+    @page_title = "AlphaBlog"
   end
 
 end
