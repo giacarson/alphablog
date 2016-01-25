@@ -1,28 +1,7 @@
-== README
+== AlphaBlog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the completed first project for "The Complete Ruby on Rails Developer Course" via udemy.
 
-Things you may want to cover:
+https://www.udemy.com/the-complete-ruby-on-rails-developer-course
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This is not a valid representation of code/design, and is generally only created to the scope of the project in the course (with a few additions or changes).
