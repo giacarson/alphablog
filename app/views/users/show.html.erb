@@ -7,12 +7,18 @@
 		</div>
 	</div>
 
-	<div class="user-profile-articles">
+	<div class="user-profile-articles container">
 		<h3><%= @user.username %>'s articles</h3>
 
-		<%= will_paginate @user_articles %>
+		<div align="center">
+			<%= will_paginate @user_articles %>
+		</div>
+
 		<%= render 'articles/article', obj: @user_articles %>
-		<%= will_paginate @user_articles %>
+
+		<div align="center">
+			<%= will_paginate @user_articles %>
+		</div>
 	</div>
 
 </section>

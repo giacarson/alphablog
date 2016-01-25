@@ -1,25 +1,29 @@
-<h1>Please login</h1>
+<section class="container">
 
-<div class="form group">
-	<%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+	<h1>Please login</h1>
 
-		<div class="col-md-8">
-			<p>
-				<%= f.label :email %><br/>
-				<%= f.email_field :email, class: "form-control", placeholder: "Email" %>
-			</p>
-		</div>
-		<div class="col-md-8">
-			<p>
-				<%= f.label :password %><br/>
-				<%= f.password_field :password, class: "form-control", placeholder: "Password" %>
-			</p>
-		</div>
+	<div class="form group">
+		<%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+
 			<div class="col-md-8">
-				<btn>
-					<%= f.submit "Login", class: 'btn btn-primary btn-md' %>
-				</btn>
+				<p>
+					<%= f.label :email %><br/>
+					<%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+				</p>
 			</div>
-		</div>
-	<% end %>
-</div>
+			<div class="col-md-8">
+				<p>
+					<%= f.label :password %><br/>
+					<%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+				</p>
+			</div>
+				<div class="col-md-8">
+					<btn>
+						<%= f.submit "Login", class: 'btn btn-primary btn-md' %>
+					</btn>
+				</div>
+			</div>
+		<% end %>
+	</div>
+
+</section>

@@ -3,7 +3,11 @@
 
 	<div class="listing">
 
+
 		<div align="center">
+      <% if logged_in? and current_user.admin? %>
+          <p><%= link_to "Edit category name", edit_category_path(@category) %></p>
+      <% end %>
 			<%= will_paginate @category_articles%>
 		</div>
 

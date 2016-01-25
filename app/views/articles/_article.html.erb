@@ -1,14 +1,16 @@
-<section class="listing">
+<div class="listing">
 	<% obj.each do |article| %>
 		<div>
 			<article>
 				<div class="row">
 					<div class="article well well-md">
 						<h2><%= link_to article.title, article_path(article) %></h2>
-						<p><%= truncate(article.description, length:290) %></p>
-						<% if article.categories.any? %>
-							<p>Categories: <%= render article.categories %></p>
-						<% end %>
+						<p><%= truncate(article.description, length:250) %></p>
+						<div class="bottom">
+							<% if article.categories.any? %>
+								<p>Categories: <%= render article.categories %></p>
+							<% end %>
+						</div>
 					</div>
 					<div class="article-info well well-md">
 						<ul class="article-owner">
@@ -27,4 +29,4 @@
 			</article>
 		</div>
 	<% end %>
-</section>
+</div>

@@ -16,13 +16,13 @@ body {
 
 	#wrap{
 		max-width: none;
-		min-height: 100%; 
+		min-height: 100%;
 	}
 
 	#main{
 		padding-bottom:50px; /* this needs to be bigger than footer height*/
 	}
-	
+
 	header {
 		height: 75px;
 		width: 100%;
@@ -31,7 +31,7 @@ body {
 		.logo {
 			float: left;
 			margin: 0;
-			padding: 30px 0; 
+			padding: 30px 0;
 			font-size: 15px;
 			font-weight: 600;
 			a {
@@ -46,7 +46,7 @@ body {
 			ul {
 				float: right;
 				list-style: none;
-				padding: 30px 0; 
+				padding: 30px 0;
 				li {
 					float: left;
 					padding:0 10px 15px;
@@ -58,11 +58,20 @@ body {
 						color: #fff;
 						border: none;
 						&:hover {
-							text-decoration:none;							color: $md-blue;
+							text-decoration:none;
+							color: $md-blue;
 						}
 					}
-					&.admin {
-						color: #5cb85c;
+					.dropdown-menu {
+						min-width: 0;
+						padding: 10px 0;
+						li {
+							padding: 5px 20px;
+							a {
+								padding: 0;
+								color: $md-blue;
+							}
+						}
 					}
 				}
 			}
@@ -115,33 +124,9 @@ body {
 		h1 {
 			float: left;
 			margin: 0;
-			padding: 30px 0; 
+			padding: 30px 0;
 			font-size: 15px;
 			font-weight: 600;
-		}
-		nav {
-			ul {
-				float: right;
-				list-style: none;
-				padding: 30px 0; 
-				li {
-					float: left;
-					padding:0 10px 15px;
-					font-weight: 600;
-					color: $gray-blue;
-					a {
-						text-decoration: none;
-						font-weight: 600;
-						color: #fff;
-						border: none;
-						&:hover {
-							text-decoration:none;
-							font-weight: 600;
-							color: $gray-blue;
-						}
-					}
-				}
-			}
 		}
 		form {
 			padding: 20px 10px 0;
@@ -214,7 +199,11 @@ section {
 		text-align: center;
 		border-bottom: 2px solid $gray-blue;
 	}
-
+	.badge {
+		background: none;
+		color: $dk-blue;
+		text-decoration: underline;
+	}
 	.listing {
 		margin:30px 0;
 		.pagination {
@@ -230,8 +219,13 @@ section {
 		}
 		.article {
 			float: left;
+			position: relative;
 			width:80%;
 			height: 150px;
+			.bottom {
+				position: absolute;
+				left: 20px; bottom: 0;
+			}
 		}
 		.article-info {
 			float: right;
@@ -260,6 +254,7 @@ section {
 		.owner-info {
 			float: right;
 			width: 20%;
+			margin: 0 0 15px 20px;
 			border: 2px solid $dk-blue;
 			border-radius: 4px;
 			ul {
@@ -268,7 +263,7 @@ section {
 				text-align: center;
 				li {
 					width: 140px;
-					padding: 5px; 
+					padding: 5px;
 				}
 			}
 		}
@@ -323,7 +318,14 @@ section {
 			padding: 30px 0 100px;
 			h3 {
 				clear:both;
-				margin: 30px 0;
+				padding: 30px 0;
+				margin: 0;
+				text-align: center;
+				border-top: 2px solid $gray-blue;
+				border-bottom: 2px solid $gray-blue;
+			}
+			.pagination {
+				margin: 20px 0 0;
 			}
 			.article {
 				height: 120px;
@@ -369,7 +371,7 @@ footer {
 	padding-top:10px;
 	background: $dk-blue;
 	p {
-		float: left;		
+		float: left;
 		color:#fff;
 	}
 	nav {
