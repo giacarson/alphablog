@@ -1,5 +1,5 @@
 <section class="container">
-
+	<h1 style="visibility:hidden; height:1px; margin:0; padding:0;"><%= @article %></h1>
 	<div class="listing">
 		<article class="post well">
 			<h1><%= @article.title %></h1>
@@ -16,7 +16,7 @@
 			<hr>
 
 			<% if @article.categories.any? %>
-				<p>Categories: <%= render @article.categories %></p> 
+				<p>Categories: <%= render @article.categories %></p>
 			<% end %>
 		</article>
 
